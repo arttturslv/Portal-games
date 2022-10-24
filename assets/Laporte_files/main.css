@@ -1,0 +1,127 @@
+@import url(./bootstrap.min.css); /*importa o arquivo do bootstrap. (ele vai ser a base)*/
+@import url(./responsive.css);
+
+body   {
+  background: #3a3d50;
+  color: #d0daef;
+  font-family: 'ars-maquette-web', sans-serif;
+}
+.moreInfo {
+    text-decoration: none;
+    color:#d0daef;
+}
+
+ul .informações .data {
+    display: block;
+    text-align: start;
+}
+.text  {
+    text-align: justify;
+}
+
+.info {
+  color: rgb(28, 30, 30); 
+  font-weight: bolder; 
+  padding-top: 25px;
+  margin: 0;
+  display: flex-end ;
+}
+.info a {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #000838;
+    text-decoration: none;
+    right: 10%;
+}
+.lançamentos img { width: 280px;height: 180px;border-radius: 7px;}
+.plataformas img { width: 320px;height: 200px;border-radius: 10px;}
+.publishers img { width: 320px;height: 200px;border-radius: 10px;}
+
+.lançamentos img:hover {	
+    opacity: 0.8;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+    
+
+h1 {
+    color: rgb(201, 187, 187); 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+}
+.navbar {
+    position: sticky;
+    top: 0;
+}
+/*DESTAQUES*/
+.destaques {
+    padding: 20px;
+    background-color: #4d516b;
+    padding-bottom: 20px;
+}
+.destaques h1  {
+    text-align:center;
+    padding: 1%;
+}
+.destaques h3   {
+    font-weight: 300;
+}
+/*FIM DOS DESTAQUES*/
+
+/*LANÇAMENTOS*/
+.lançamentos {
+    padding: 20px;
+    background-color: #122175;
+    padding: 20px;
+}
+.col li {
+    list-style-type: none;
+}
+/* PUBLISHERS */
+.plataformas {
+    padding-top: 20px;
+    background-color: #3c4165;
+    padding-bottom: 20px;
+}
+.plataformas h1 {
+    display: flex;
+}
+
+/*.col {
+    text-align: left; ISSO DEIXA AS PALAVRAS ALINHADAS, MAS AO DIMINUIR A TELA, PERDE A PROPORÇÃO E ENCOSTAM NA PAREDE
+*/
+#moreInfo {
+    text-align: right;
+}
+/* PUBLISHERS */
+.publishers  {
+    padding-top: 20px;
+    background-color: #4d516b;
+    padding-bottom: 20px;
+}
+.publishers h1 {
+    display: flex;
+}
+/* SOBRE */
+.sobre  {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.edit {
+    padding-left: 30px;
+    text-align: start;
+}
+.edit h1 {
+    padding-left: 30px;
+}
+/* FOOTER */
+footer {
+    padding-top: 20px;
+    background-color: #babed5;
+    color:white;
+}
+.foot h1 {
+    color:#000838;
+}

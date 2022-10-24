@@ -1,0 +1,430 @@
+@import url(./bootstrap.min.css);
+/*importa o arquivo do bootstrap. (ele vai ser a base)*/
+@import url(./responsive.css);
+/*importa o arquivo de responsividade*/
+
+/* PARA TODO O SITE*/
+
+body {
+    color: white;
+    background: #0a2e36;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif !important;
+    color: whitesmoke !important;
+}
+
+h3 {
+    font-family: 'Libre Baskerville', serif !important;
+}
+
+h4 {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+h5 {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.moreInfo {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    z-index: 999;
+}
+
+/* HEADER ----------------------------------*/
+
+.navbar-toggler {
+    border-color: #222222;
+}
+
+.toggler-icon {
+    color: white;
+}
+
+.logo {
+    padding-left: 20%;
+}
+
+#header {
+    width: 100%;
+    background-color: #3a3d50;
+}
+
+#header.active {
+    position: fixed;
+    z-index: 9999;
+    box-shadow: 5px 4px 10px black;
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(66, 115, 184);
+    text-shadow: 2px 2px 3px rgb(10, 36, 73);
+}
+
+.navbar ul li {
+    text-shadow: 2px 1px 3px rgb(10, 36, 73);
+}
+
+/*DESTAQUES ----------------------------------*/
+
+.destaques {
+    position: relative;
+    top: 76px;
+
+}
+
+ul .informações .info {
+    display: block;
+    text-align: start;
+}
+
+.destaques {
+    padding: 20px;
+    background: #3a3d50;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 10px rgb(6, 16, 60);
+}
+
+.destaques h1 {
+    text-align: center;
+    padding: 1%;
+}
+
+.destaques p a {
+    text-decoration: none;
+    color: white;
+}
+
+/*LANÇAMENTOS ----------------------------------*/
+
+.lançamentos img {
+    width: 280px;
+    height: 180px;
+    border-radius: 7px;
+}
+
+.lançamentos {
+    margin-top: 80px;
+}
+
+/*animação dos list_jogos*/
+#cf {
+    position: relative;
+    height: 180px;
+}
+
+#cf img {
+    position: absolute;
+    left: 8%;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+    opacity: 0;
+}
+
+#cf img {
+    width: 270px;
+    height: 180px;
+}
+
+/* fim animação dos list_jogos*/
+
+/* controla a div dos jogos, o hover da avaliação e posição*/
+.card_jogo {
+    text-align: center;
+    position: relative;
+    width: 290px;
+}
+
+.card_jogo h5 {
+    top: 20%;
+    right: 3%;
+}
+
+.card_jogo:hover>h5 {
+    display: none;
+}
+
+/* fim */
+
+.lançamentos {
+    list-style: none;
+    padding: 20px;
+    background: #0a2e36;
+    box-shadow: 0px 43px 26px 29px rgba(0, 0, 0, 0.75);
+
+}
+
+.lançamentos h5 {
+    padding-left: 10px;
+    position: absolute;
+    /*avaliação> perde ocupação*/
+    z-index: 999;
+    color: rgb(32, 223, 7);
+    text-shadow: 1px 1px 2px black;
+}
+
+.lançamentos img {
+    box-shadow: 2px 2px 50px black;
+    position: relative;
+    /*avaliação sem ocupação fica em img*/
+}
+
+.lanc_jogos p {
+    text-align: start;
+    margin-top: 15px;
+    padding-left: 10%;
+    color: rgb(167, 20, 20);
+}
+
+.lanc_jogos h4 {
+    padding: 10px;
+    color: rgb(224, 224, 8);
+    text-shadow: 2px 2px 5px black;
+}
+
+.fa-face-meh {
+    color: yellow;
+}
+
+.fa-face-smile {
+    color: lightgreen;
+}
+
+.fa-face-frown {
+    color: red;
+}
+
+/* PLATAFORMAS ----------------------------------*/
+
+.plataformas img {
+    width: 320px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.conteudo_plat {
+    width: 320px;
+    height: 420px;
+}
+
+.plataformas p {
+    text-align: end;
+    font-weight: bolder;
+}
+
+.plataformas {
+    padding-top: 20px;
+    background-color: #4d516b;
+    padding-bottom: 20px;
+    padding-bottom: 20px;
+
+}
+
+.plataformas img {
+    box-shadow: 2px 2px 20px black;
+}
+
+.plataformas img:hover {
+    opacity: 0.7;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.plataformas li {
+    text-align: start;
+    padding-left: 15%;
+    color: white;
+
+}
+
+.plataformas .col p {
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 12%;
+}
+
+.plataformas h1 {
+    display: flex;
+}
+
+.plataformas h4 {
+    padding: 10px;
+    color: rgb(143, 212, 39);
+    text-shadow: 2px 2px 5px black;
+}
+
+/* PUBLISHER */
+
+.publishers img {
+    width: 320px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.conteudo_publ {
+    width: 320px;
+    height: 420px;
+}
+
+.publishers p {
+    text-align: end;
+    font-weight: bolder;
+}
+
+.conteudo_publ:hover {
+    transform: scale(1.03);
+}
+
+.publishers {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #0a2e36;
+    z-index: -999;
+}
+
+.publishers img {
+    box-shadow: 2px 2px 20px black;
+}
+
+.publishers img:hover {
+    opacity: 0.7;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.publishers li {
+    text-align: start;
+    padding-left: 15%;
+    color: white;
+}
+
+.publishers .col p {
+    /*text-align:right;*/
+    padding-top: 10px;
+}
+
+.publishers h4 {
+    padding: 10px;
+    color: rgb(143, 212, 39);
+
+    text-shadow: 2px 2px 5px black;
+}
+
+.publishers h1 {
+    display: flex;
+}
+
+/*SOBRE ----------------------------------*/
+
+.text {
+    /*texto do destaques e segundo texto paragrafo sobre*/
+    text-align: justify;
+}
+
+.text2 {
+    /*primeiro paragrafo sobre*/
+    text-align: justify;
+}
+
+.text3 {
+    /*segundo paragrafo destaque*/
+    text-align: justify;
+}
+
+.sobre {
+    padding-top: 20px;
+    box-shadow: 0px -3px 25px -7px rgba(0, 0, 0, 0.75);
+    text-align: justify;
+    background-color: #4d516b;
+}
+
+.sobre ul li {
+    list-style: none !important;
+}
+
+.sobre .redes {
+    padding-top: 10px;
+}
+
+.sobre h1 {
+    text-align: start;
+    color: white;
+}
+
+.edit {
+    padding-left: 30px;
+    text-align: start;
+}
+
+.edit h1 {
+    padding-left: 30px;
+}
+
+.rd_telefone li {
+    /*lista editorial*/
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 10px;
+
+}
+
+.rd_telefone img {
+    /*lista editorial*/
+    width: 13%;
+    height: 13%;
+    margin: 0 15px;
+}
+
+/*FOOTER ----------------------------------*/
+
+footer {
+    padding: 10px;
+    background: #3a3d50;
+    color: white;
+    position: relative;
+}
+
+footer p {
+    top: 100%;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.footer_img {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0, -50%);
+}
+
+.div-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 56.5%;
+}
+
+.div-video iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
