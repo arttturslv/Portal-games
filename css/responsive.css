@@ -1,3 +1,42 @@
+/*RESPONSIVIDADE PESQUISA*/
+
+
+
+
+
+
+
+
+
+
+
+/* FIM   RESPONSIVIDADE PESQUISA*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*sobre e editorial vira block, texto editorial some e fica só imagens*/
 @media (max-width: 577px) {
     .sobre .col:nth-child(1) {

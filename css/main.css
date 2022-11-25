@@ -1,4 +1,4 @@
-@import url(./bootstrap.min.css);
+/*@import url(./bootstrap.min.css);*/
 /*importa o arquivo do bootstrap. (ele vai ser a base)*/
 @import url(./responsive.css);
 /*importa o arquivo de responsividade*/
@@ -9,6 +9,8 @@ body {
     color: white;
     background: #0a2e36;
     font-family: 'Open Sans', sans-serif !important;
+    
+
 }
 
 h1 {
@@ -156,9 +158,6 @@ ul .informações .info {
     right: 3%;
 }
 
-.card_jogo:hover>h5 {
-    display: none;
-}
 
 /* fim */
 
@@ -181,7 +180,6 @@ ul .informações .info {
 
 .lançamentos img {
     box-shadow: 2px 2px 50px black;
-    position: relative;
     /*avaliação sem ocupação fica em img*/
 }
 
@@ -196,18 +194,6 @@ ul .informações .info {
     padding: 10px;
     color: rgb(224, 224, 8);
     text-shadow: 2px 2px 5px black;
-}
-
-.fa-face-meh {
-    color: yellow;
-}
-
-.fa-face-smile {
-    color: lightgreen;
-}
-
-.fa-face-frown {
-    color: red;
 }
 
 /* PLATAFORMAS ----------------------------------*/
@@ -397,13 +383,22 @@ footer {
     padding: 10px;
     background: #3a3d50;
     color: white;
-    position: relative;
 }
-
+#fot{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 footer p {
     top: 100%;
     display: table-cell;
-    vertical-align: middle
+    vertical-align: middle;
+    
+}
+#wrapper{
+    min-height: 100%;
+    position: relative;
 }
 
 .footer_img {

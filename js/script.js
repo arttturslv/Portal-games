@@ -1,13 +1,135 @@
 
+/* ***************************************************************
+        INVOCANDO FUNÇÕES:
+            - Carregar lançamentos
+            - Carregar publishers
+        
+   *************************************************************** */
+    
+//let qntCardJogos = 8;                   // define a quantidade de jogos a serem mostrados por vez.
+//atualizaJogos(qntCardJogos);            // chama a função que mostra o card dos jogos no lançamento.
+ 
+//let qntCardPublishers = 3;              // define a quantidade de publishers a serem mostrados por vez.
+//atualizaPublishers (qntCardPublishers)  // chama a função que mostra o card dos publishers
 
-console.log('teste1')
-let qntCardJogos = 8;
 
 
-atualizaJogos(qntCardJogos) //chamando função p/ carregar lançamentos
+    // Recebe o valor do input e armaneza em valorInput
+const btn = document.querySelector("#txt-button");
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();//para o evento default formulario
+    
+        const busca = document.querySelector("#txt");
+        const valorInput = busca.value;
+        console.log(valorInput);
+        recebePesquisa(valorInput);
 
-// criacao de funcoes para os lançamentos
+    })
 
+/* ***************************************************************
+        CRIANDO FUNÇÕES:
+            - Pesquisa (API)            pesquisa (valorInput)
+            - Classificação etária      traduzClassificação (perm)
+            - Lançamentos (API)         atualizaJogos (qntCardJogos)
+            - Data de lançamento        dataLancamento(dataEN)
+            - Rating em icones          reviewEstrelas (rating)
+            - Button + jogos            bttAtualizaJogos ()
+            - Lançamentos (API)         atualizaPublishers (qntCardPublishers)
+            - Button + publishers       bttAtualizaPublishers ()
+        
+   *************************************************************** */
+
+    // função que faz fetch com a api dependendo do input e mostra na tela.
+/*    function recebePesquisa (valorInput) {
+        fetch (`https://api.rawg.io/api/games?key=4167d5a86b9b47439d0b46aa63a7d97c&search=${valorInput}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data===undefined)   {
+                console.log('nao existe')
+                alert('O jogo não foi encontrado!');
+            } else {
+                let strr = '';
+                var data2 = data;
+            }})
+        window.location.href = "/pesquisa.html";
+        mostraPesquisa(data2);
+    }
+    function mostraPesquisa (data2) {
+        let strr = '';
+        for (let i=0; i<6;i++)  {
+            let jsg = data2.results[i];
+            var perm = jsg.esrb_rating.name;
+            strr += `  <div class="jogosPesquisados" id="ds">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 imgdiv">
+                    <img class="img" src="${jsg.background_image}">
+                </div>
+                <div class="col-md-10 col-sm-8 ">
+                    <h5> ${jsg.name}</h5>
+                    <ul>
+                        <li><p>Review: ${jsg.rating}</p></li>
+                        <li><p>Data de lançamento: ${dataLancamento(data.results[i].released)}</p></li>
+                        <li><p>Classificação indicativa: ${traduzClassificação (perm)} </p></li>
+                    </ul>
+                </div>
+            </div>
+          </div>`
+        }
+        console.log(strr);
+        document.getElementById('temp').innerHTML = strr;
+    }
+    /*
+function pesquisa (valorInput) {
+    alert("eae");
+   fetch (`https://api.rawg.io/api/games?key=4167d5a86b9b47439d0b46aa63a7d97c&search=${valorInput}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data===undefined)   {
+                console.log('nao existe')
+                alert('O jogo não foi encontrado!');
+            } else {
+                let strr = '';
+                for (let i=0; i<6;i++)  {
+                    let jsg = data.results[i];
+                    var perm = jsg.esrb_rating.name;
+                    strr += `  <div class="jogosPesquisados" id="ds">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 imgdiv">
+                            <img class="img" src="${jsg.background_image}">
+                        </div>
+                        <div class="col-md-10 col-sm-8 ">
+                            <h5> ${jsg.name}</h5>
+                            <ul>
+                                <li><p>Review: ${jsg.rating}</p></li>
+                                <li><p>Data de lançamento: ${dataLancamento(data.results[i].released)}</p></li>
+                                <li><p>Classificação indicativa: ${traduzClassificação (perm)} </p></li>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>`
+                }
+                console.log(strr);
+                document.getElementById('temp').innerHTML = strr;
+            }
+        })
+}
+
+    // função para receber a classificação etaria e traduzir
+function traduzClassificação (perm) {
+    if (perm == "Teen")   {
+        return "Adolescentes"
+    } else if (perm == "Mature") {
+        return "Jovem adulto"
+    } else if (perm == "Adults Only") {
+        return "Apenas adultos"
+    } else if (perm == "Everyone") {
+        return "Todos"
+    } else {
+        return "Sem classificação"
+    }
+}
+
+    // função que faz fetch com a api e mostra apenas a qnt necessaria de jogos.
 function atualizaJogos (qntCardJogos) {
 fetch ('https://api.rawg.io/api/games?key=4167d5a86b9b47439d0b46aa63a7d97c')
     .then(res => res.json())
@@ -17,14 +139,14 @@ fetch ('https://api.rawg.io/api/games?key=4167d5a86b9b47439d0b46aa63a7d97c')
             let jg = data.results[i];
             str += `<div class="col-md-6 col-lg-4 col-xxl-3">
             <div class="card_jogo">
-              <h5 id="strela">${reviewEstrelas(jg.rating)}</h5>
               <h4 id="nomeJogo">${jg.name}</h4>
               <div id="cf">
                 <img class="bottom" src="${jg.short_screenshots[1].image}" alt="Bootstrap" width="160"
                   height="90">
                 <img class="top" src="${jg.background_image}" alt="Bootstrap" width="160" height="90">
               </div>
-              <p> <a class="moreInfo" id="dta" href="#">Data de lançamento: ${dtLanca(data.results[i].released)}</a></p>
+              <p> <a class="moreInfo" id="strela" href="#">Notas: ${reviewEstrelas(jg.rating)}</a></p>
+              <p> <a class="moreInfo" id="dta" href="#">Data de lançamento: ${dataLancamento(data.results[i].released)}</a></p>
               <p> <a class="moreInfo" href="https://www.youtube.com/watch?v=K-jQz0qA1xA">Mais detalhes</a></p>
             </div>
           </div>`
@@ -33,16 +155,18 @@ fetch ('https://api.rawg.io/api/games?key=4167d5a86b9b47439d0b46aa63a7d97c')
     })
 }
 
-function dtLanca(dtbr) { //pega o released e transforma em data brasileira
-    let ano = dtbr.substring(4,0);
-    let mes = dtbr.substring(7,5);
-    let dia = dtbr.substring(10,8);
+    // função que pega o released e transforma em data brasileira
+function dataLancamento(dataEN) {
+    let ano = dataEN.substring(4,0);
+    let mes = dataEN.substring(7,5);
+    let dia = dataEN.substring(10,8);
 
-    let lancamentoData = dia + '/'+ mes + '/'+ano;
-        return lancamentoData;
+    let dataPT = dia + '/'+ mes + '/'+ano;
+        return dataPT;
 }
 
-function reviewEstrelas (rating) { //pega o rating e transforma em icones de estrela
+    // função pega o rating e transforma em icones de estrela
+function reviewEstrelas (rating) { 
     let qtnEstrelas = 0;
     let pontas='<i class="fa-solid fa-star"></i>';
     
@@ -69,6 +193,8 @@ function reviewEstrelas (rating) { //pega o rating e transforma em icones de est
         }
     return pontas;    
 }
+
+    // função que deixa o botão de "carregar" funcional
 function bttAtualizaJogos () {
     if (qntCardJogos<19)    {
         qntCardJogos +=4;
@@ -80,12 +206,7 @@ function bttAtualizaJogos () {
     }
 }
 
-// criacao de funcoes para os publishers
-
-let qntCardPublishers = 3;
-
-atualizaPublishers (qntCardPublishers)
-
+    // função que faz fetch com a api e mostra apenas a qnt necessaria de publishers.
 function atualizaPublishers (qntCardPublishers) {
     fetch ('https://api.rawg.io/api/publishers?key=4167d5a86b9b47439d0b46aa63a7d97c')
         .then(res => res.json())
@@ -111,6 +232,7 @@ function atualizaPublishers (qntCardPublishers) {
         })
 }
 
+    // função que deixa o botão de "carregar" funcional
 function bttAtualizaPublishers () {
 
     if(typeof window !== 'undefined')   {
@@ -128,6 +250,51 @@ function bttAtualizaPublishers () {
         console.log("nao da pra acessar o document")
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
