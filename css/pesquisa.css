@@ -108,3 +108,9 @@ h5 {
     object-fit: cover;
     object-position: bottom;
 }
+
+.divPesq    {
+    color: none;
+    text-decoration: none;
+    color: white;
+}

@@ -54,6 +54,11 @@
 }
 
 @media (max-width: 767.98px) {
+    #cf {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .lançamentos h1 {
         /*titulo alinha no mobile*/
         text-align: center;

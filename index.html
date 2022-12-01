@@ -61,20 +61,26 @@
               </li>
 
             </ul>
-            <form class="d-flex" role="search" action="/pesquisa.html" id="textoPesquisa" >
-              <input class="form-control me-2" type="text" id="txt" placeholder="Search" aria-label="Search" >
-              <button class="btn btn-outline-success" type="submit"  id="txt-button" value="enviar">Search</button>
-            </form>
-          </div>
+            <input class="form-control me-2" type="text" id="txtSearch" placeholder="Search" >
+             <button class="btn btn-outline-success" id="btnSearch" onclick="redireciona()">Search</button>
+            </div>
         </div>
       </div>
     </nav>
   </div>
 
+  <script>
+      let indexSearch = document.getElementById('txtSearch');
+      function redireciona () {
+        console.log('Pagina de pesquisa será carregada.')
+        window.location.href = `/pesquisa.html?name=${indexSearch.value}`
+      }
+  </script>
+
   <!-- AQUI FICA TODA PARTE DE DESTAQUES-->
   <div class="destaques" id="destaquesId">
     <div>
-      <p class="creator">Artur Marcos da Silva - ADS - Matricula </p>
+      <p class="creator">Artur Marcos da Silva - ADS - 00796214 </p>
        <h1>DESTAQUES</h1>
     </div>
     <!-- CAROUSEL-->
@@ -224,7 +230,6 @@
     <!-- CAROUSEL FIM-->
 
   </div>
-
   <!-- FIM DA PARTE DE DESTAQUES-->
 
   <!-- AQUI FICA TODA PARTE DE LANÇAMENTOS-->
@@ -283,7 +288,7 @@
 
             <div class="row" id="rwJogos">
               
-              <div class="col-md-6 col-lg-4 col-xxl-3" onclick="alert( this.nomeJogo.value )">
+              <div class="col-md-6 col-lg-4 col-xxl-3">
                 <div class="card_jogo">
                   <h4 id="nomeJogo">Grand Theft Auto: San Andreas</h4>
                   <div id="cf">
@@ -333,7 +338,6 @@
 
   </div>
   <!-- FIM DA PARTE DE LANÇAMENTOS-->
-
 
   <!-- AQUI FICA TODA PARTE DE PLATAFORMAS-->
   <div class="plataformas" id="plataformasId">
@@ -407,7 +411,6 @@
 
     </div>
   </div>
-
   <!-- FIM DA PARTE DE PLATAFORMAS-->
 
   <!-- AQUI FICA TODA PARTE DE PUBLISHERS-->
@@ -483,7 +486,6 @@
 
     </div>
   </div>
-
   <!-- FIM DA PARTE DE PUBLISHERS-->
 
   <!-- SOBRE E EDITORIAL-->
@@ -530,7 +532,6 @@
 
     </div>
   </div>
-
   <!-- FIM SOBRE E EDITORIAL-->
 
   <!-- INICIO FOOTER-->
@@ -552,7 +553,6 @@
 
   </footer>
   <!-- FIM FOOTER-->
-
 </body>
 
 <script type="text/javascript" src="/js/script.js"></script>

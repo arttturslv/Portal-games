@@ -30,7 +30,7 @@
   <title>Pesquisa</title>
 </head>
 
-<body onload="pesquisa(resultadoPesquisa)">
+<body>
 
   <div id="header" class="active">
     <nav class="navbar navbar-expand-lg bg- justify-content-between">
@@ -61,10 +61,9 @@
               </li>
 
             </ul>
-            <form class="d-flex" role="search" id="textoPesquisa" >
-              <input class="form-control me-2" type="text" id="txt" placeholder="Search" aria-label="Search" >
-              <button class="btn btn-outline-success" type="submit" id="txt-button" value="enviar">Search</button> </a>
-            </form>
+              <input class="form-control me-2" type="text" id="txtSearch" placeholder="Search" >
+              <button class="btn btn-outline-success" id="btnSearch" >Search</button> </a>
+            
           </div>
         </div>
       </div>
@@ -72,17 +71,77 @@
   </div>
   <div id="hidden"></div>
 
-  <div id="resultados">
-
-  </div>
+  <div id="resultados"></div>
 
 </body>
+
 <script type="text/javascript" src="/js/script.js"></script>
 
 <script>
-// Deixa a div mais visivel quando tem um mouse em cima.
 
+    var txtSearch = document.getElementById('txtSearch')
+    let btnSearch = document.getElementById('btnSearch');        
+    let gamesPlace = document.getElementById('resultados')
+    let txtPesquisa = txtSearch.value
 
+    if (txtSearch.value === '') {
+      console.log('txt tava vazio')
+      const urlP = window.location.search;
+      const urlParams = new URLSearchParams(urlP);
+      var txtParams = urlParams.get('name');
+    }
+
+    document.body.onload = () => {
+        btnSearch.addEventListener ('click', pesquisaClick )
+    }
+
+    function pesquisaClick () {
+      window.location.href = `/pesquisa.html?name=${txtSearch.value}`
+    }
+
+</script>
+
+<script defer>
+
+    if (txtSearch.value === '') {
+        pesquisaParams()
+    }
+
+      function pesquisaParams () {
+      console.log('entrou na function pesquisa')
+        let url =`https://api.rawg.io/api/games?key=4167d5a86b9b47439d0b46aa63a7d97c&search=${txtParams}`
+        console.log('url: '+url)
+        fetch (url)
+            .then(res => res.json())
+            .then(data => {
+                   let saida = '';
+                    for (let i=0; i<6;i++)  {                    
+                        let search = data.results[i];
+                        var esrb = search.esrb_rating;
+                        if (esrb === undefined ) {
+                          esrb = "undefined"
+                        }
+                        saida += `  <a class="divPesq" href="detalhes.html?id=${search.id}"><div class="jogosPesquisados" id="ds">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 imgdiv">
+                                <img class="img" src="${search.background_image}">
+                            </div>
+                            <div class="col-md-10 col-sm-8 ">
+                                <h5> ${search.name}</h5>
+                                <ul>
+                                    <li><p>Review: ${search.rating}</p></li>
+                                    <li><p>Data de lançamento: ${dataTransform(search.released)}</p></li>
+                                    <li><p>Classificação indicativa: ${classficacaoTransform (esrb)} </p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>`
+                      }
+                    console.log(saida)
+                    gamesPlace.innerHTML = saida;
+            })
+    }
+   
 </script>
     
 </html>
