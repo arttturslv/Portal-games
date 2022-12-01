@@ -1,7 +1,60 @@
-/*@import url(./bootstrap.min.css);*/
-/*importa o arquivo do bootstrap. (ele vai ser a base)*/
 @import url(./responsive.css);
 /*importa o arquivo de responsividade*/
+
+
+
+.jogosPesquisados {
+    border: 3px solid rgb(211, 65, 65);
+    border-radius: 10px;
+    margin: 50px;
+    height: 30%;
+}
+.jogosPesquisados:hover {
+    font-weight: 500;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+}
+
+.jogosPesquisados h5{
+    color:rgb(161, 46, 46);
+    font-size: larger;
+    font-weight: bolder !important;
+}
+
+
+.imgdiv {
+    position: relative;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* PARA TODO O SITE*/
 
@@ -9,8 +62,14 @@ body {
     color: white;
     background: #0a2e36;
     font-family: 'Open Sans', sans-serif !important;
+}
+#txt {
+    background-color: #2c2e39;
+    color:white;
     
-
+}
+#txt-button{
+    background-color: #2c2e39;
 }
 
 h1 {
@@ -77,6 +136,12 @@ h5 {
 .navbar ul li {
     text-shadow: 2px 1px 3px rgb(10, 36, 73);
 }
+.creator {
+    text-align: center;
+    font-weight: 700;
+    padding: 0;
+    margin: 2px;
+}
 
 /*DESTAQUES ----------------------------------*/
 
@@ -100,7 +165,7 @@ ul .informações .info {
 
 .destaques h1 {
     text-align: center;
-    padding: 1%;
+    padding-bottom: 1%;
 }
 
 .destaques p a {
@@ -115,7 +180,9 @@ ul .informações .info {
     height: 180px;
     border-radius: 7px;
 }
-
+.lancol {
+    padding-bottom: 4px;
+}
 .lançamentos {
     margin-top: 80px;
 }
@@ -146,20 +213,6 @@ ul .informações .info {
 
 /* fim animação dos list_jogos*/
 
-/* controla a div dos jogos, o hover da avaliação e posição*/
-.card_jogo {
-    text-align: center;
-    position: relative;
-    width: 290px;
-}
-
-.card_jogo h5 {
-    top: 20%;
-    right: 3%;
-}
-
-
-/* fim */
 
 .lançamentos {
     list-style: none;
@@ -184,16 +237,29 @@ ul .informações .info {
 }
 
 .lanc_jogos p {
-    text-align: start;
-    margin-top: 15px;
-    padding-left: 10%;
-    color: rgb(167, 20, 20);
+    text-align: end;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    padding-right: 10%;
+
 }
+
+.card_jogo ul {
+    list-style: none;
+    padding: 15px;
+    margin-left:6%;
+
+}
+
 
 .lanc_jogos h4 {
     padding: 10px;
     color: rgb(224, 224, 8);
     text-shadow: 2px 2px 5px black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 50px;
 }
 
 /* PLATAFORMAS ----------------------------------*/
@@ -207,11 +273,6 @@ ul .informações .info {
 .conteudo_plat {
     width: 320px;
     height: 420px;
-}
-
-.plataformas p {
-    text-align: end;
-    font-weight: bolder;
 }
 
 .plataformas {

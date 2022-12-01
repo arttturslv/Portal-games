@@ -1,4 +1,3 @@
-/*importa o arquivo do bootstrap. (ele vai ser a base)*/
 @import url(./responsive.css);
 /*importa o arquivo de responsividade*/
 
@@ -75,6 +74,9 @@ h5 {
 .navbar ul li {
     text-shadow: 2px 1px 3px rgb(10, 36, 73);
 }
+#hidden {
+    padding-top: 100px;
+}
 .jogosPesquisados {
     border: 3px solid rgb(211, 65, 65);
     border-radius: 10px;
@@ -93,9 +95,7 @@ h5 {
     font-weight: bolder !important;
 }
 
-#hidden {
-    padding-top: 100px;
-}
+
 .imgdiv {
     position: relative;
 }

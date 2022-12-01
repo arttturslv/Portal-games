@@ -70,9 +70,11 @@
       </div>
     </nav>
   </div>
+
   <!-- AQUI FICA TODA PARTE DE DESTAQUES-->
   <div class="destaques" id="destaquesId">
     <div>
+      <p class="creator">Artur Marcos da Silva - ADS - Matricula </p>
        <h1>DESTAQUES</h1>
     </div>
     <!-- CAROUSEL-->
@@ -91,7 +93,7 @@
                 <div class="container">
                   <div class="div-video">
                     <iframe width="560" height="315"
-                      src="https://www.youtube.com/embed/nOMIwsupy9k?autoplay=1&mute=1"></iframe>
+                      src="https://www.youtube.com/embed/nOMIwsupy9k?controls=0&autoplay=1&mute=1"></iframe>
                   </div>
                 </div>
               </div>
@@ -222,6 +224,7 @@
     <!-- CAROUSEL FIM-->
 
   </div>
+
   <!-- FIM DA PARTE DE DESTAQUES-->
 
   <!-- AQUI FICA TODA PARTE DE LANÇAMENTOS-->
@@ -229,7 +232,7 @@
     <div class="container text-center">
 
       <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12 lancol">
           <h1>Lançamentos</h1>
         </div>
 
@@ -280,116 +283,24 @@
 
             <div class="row" id="rwJogos">
               
-            <!--  <div class="col-md-6 col-lg-4 col-xxl-3">
+              <div class="col-md-6 col-lg-4 col-xxl-3" onclick="alert( this.nomeJogo.value )">
                 <div class="card_jogo">
-                  <h5><i class="fa-regular fa-face-smile"></i></h5>
-                  <h4 id="nomeJogo">Stray</h4>
+                  <h4 id="nomeJogo">Grand Theft Auto: San Andreas</h4>
                   <div id="cf">
-                    <img class="bottom" src="assets/stray_video.gif" alt="Bootstrap" width="160"
+                    <img class="bottom" src="/assets/mojang-logo.webp" alt="Bootstrap" width="160"
                       height="90">
-                    <img class="top" src="assets/stray.webp" alt="Bootstrap" width="160" height="90">
                   </div>
-                  <p> <a class="moreInfo" id="dta" href="#">Data de lançamento: </a></p>
-                  <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
+                  <ul>
+                  <div class="informações">
+                    <span class="info"><strong>Notas:</strong>: 🌟🌟🌟🌟</span>
+                    <span class="info"><strong>Data de lançamento:</strong>: 01/11/2022</span>
+                    <span class="info"><strong>Tempo de jogo:</strong>: 9h</span>
+                    <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
+                  </div>
+                  </ul>
                 </div>
               </div>
 
-
-              <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="card_jogo">
-                  <h5><i class="fa-regular fa-face-smile"></i></h5>
-                  <h4>Thymesia</h4>
-                  <div id="cf">
-                    <img class="bottom" src="assets/thymesia_video.gif" alt="Bootstrap" width="160"
-                      height="90">
-                    <img class="top" src="assets/thymesia.jpg" alt="Bootstrap" width="160" height="90">
-                  </div>
-                  <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-                </div>
-              </div>
-
-
-              <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="card_jogo">
-                  <h5><i class="fa-regular fa-face-frown"></i></h5>
-                  <h4>Fifa 23</h4>
-                  <div id="cf">
-                    <img class="bottom" src="assets/fifa_video.gif" alt="Bootstrap" width="160"
-                      height="90">
-                    <img class="top" src="assets/fifa.jpg" alt="Bootstrap" width="160" height="90">
-                  </div>
-                  <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-                </div>
-              </div>
-
-
-              <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="card_jogo">
-                  <h5><i class="fa-regular fa-face-smile"></i></h5>
-                  <h4>Spider Man</h4>
-                  <div id="cf">
-                    <img class="bottom" src="assets/spiderman_video.gif" alt="Bootstrap" width="160"
-                      height="90">
-                    <img class="top" src="assets/spider.jpg" alt="Bootstrap" width="160" height="90">
-                  </div>
-                  <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-                </div>
-              </div>
-
-
-              <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="card_jogo">
-                  <h5><i class="fa-regular fa-face-smile"></i></h5>
-                  <h4>Hogwarts Legacy</h4>
-                  <div id="cf">
-                    <img class="bottom" src="assets/hogwarts_video.gif" alt="Bootstrap" width="160"
-                      height="90">
-                    <img class="top" src="assets/hogwarts.jpg" alt="Bootstrap" width="160" height="90">
-                  </div>
-                  <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="card_jogo">
-                  <h5><i class="fa-regular fa-face-smile"></i></h5>
-                  <h4>Elden Ring</h4>
-                  <div id="cf">
-                    <img class="bottom" src="assets/eldenring_video.webp" alt="Bootstrap" width="160"
-                      height="90">
-                    <img class="top" src="assets/elden-ring.png" alt="Bootstrap" width="160" height="90">
-                  </div>
-                  <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-                </div>
-              </div>
-
-
-              <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="card_jogo">
-                  <h5><i class="fa-regular fa-face-smile"></i></h5>
-                  <h4>Call of Duty: MW II</h4>
-                  <div id="cf">
-                    <img class="bottom" src="assets/callofduty_video.webp" alt="Bootstrap" width="160"
-                      height="90">
-                    <img class="top" src="assets/callofduty.jpg" alt="Bootstrap" width="160" height="90">
-                  </div>
-                  <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-                </div>
-              </div>
-
-
-              <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="card_jogo">
-                  <h5><i class="fa-regular fa-face-meh"></i></h5>
-                  <h4>Splatoon 3</h4>
-                  <div id="cf">
-                    <img class="bottom" src="assets/splatoon_video.gif" alt="Bootstrap" width="160"
-                      height="90">
-                    <img class="top" src="assets/splatoon.jpg" alt="Bootstrap" width="160" height="90">
-                  </div>
-                  <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-                </div>
-              </div>-->
 
             </div>  
           </div>
@@ -432,7 +343,7 @@
           <h1>Plataformas</h1>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="rwPlataformas">
 
         <div class="col">
           <div class="conteudo_plat">
@@ -643,6 +554,7 @@
   <!-- FIM FOOTER-->
 
 </body>
+
 <script type="text/javascript" src="/js/script.js"></script>
 
 </html>

@@ -1,0 +1,134 @@
+@import url(./responsive.css);
+/*importa o arquivo de responsividade*/
+
+/* PARA TODO O SITE*/
+
+body {
+    color: white;
+    background: #0a2e36;
+    font-family: 'Open Sans', sans-serif !important;
+    height: 100vh;
+}
+main {
+    margin: 3% 2% 3.5% 2% ;
+}
+h4 {
+    font-weight: bold;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 40px;
+}
+p {
+    text-align: justify;
+}
+
+
+/* HEADER ----------------------------------*/
+
+.navbar-toggler {
+    border-color: #222222;
+}
+
+.toggler-icon {
+    color: white;
+}
+
+.logo {
+    padding-left: 20%;
+}
+
+#header {
+    width: 100%;
+    background-color: #3a3d50;
+}
+
+#header.active {
+    position: fixed;
+    z-index: 9999;
+    box-shadow: 5px 4px 10px black;
+    
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(66, 115, 184);
+    text-shadow: 2px 2px 3px rgb(10, 36, 73);
+}
+
+.navbar ul li {
+    text-shadow: 2px 1px 3px rgb(10, 36, 73);
+}
+#hidden {
+    padding-top: 70px;
+}
+/* */
+
+.icones {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    border: 3px solid rgb(211, 65, 65);
+    padding: 20px 0px 20px 0px;
+    border-radius: 10px;
+}
+.icon {
+    font-size: calc(2em + 1vw);
+}
+.jogoDetalhado {
+    padding: 3% 3% 1% 3%;
+    border: 3px solid rgb(211, 65, 65);
+    border-radius: 10px;
+    margin: 0 2% 2% 2%;
+}
+img {
+    border-radius: 10px;
+}
+.jhs {
+    padding-top: 1%;
+}
+ul.addInfoDetalhes {
+    margin: 0;
+    list-style-type: none;
+}
+.addInfoDetalhes {
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+/* FOOTER */
+footer {
+    padding: 10px;
+    background: #3a3d50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+}
+#fot{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    top: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+#wrapper{
+    min-height: 100%;
+    position: relative;
+    bottom: 0;
+
+}
+
+.footer_img {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0, -50%);
+}
