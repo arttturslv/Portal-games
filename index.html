@@ -71,7 +71,7 @@
 
   <script>
       let indexSearch = document.getElementById('txtSearch');
-      function redireciona () {
+      function redireciona () { //redireciona passando o valor pra url.
         console.log('Pagina de pesquisa será carregada.')
         window.location.href = `/pesquisa.html?name=${indexSearch.value}`
       }
@@ -286,28 +286,7 @@
         <div class="lanc_jogos">
           <div class="container text-center">
 
-            <div class="row" id="rwJogos">
-              
-              <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="card_jogo">
-                  <h4 id="nomeJogo">Grand Theft Auto: San Andreas</h4>
-                  <div id="cf">
-                    <img class="bottom" src="/assets/mojang-logo.webp" alt="Bootstrap" width="160"
-                      height="90">
-                  </div>
-                  <ul>
-                  <div class="informações">
-                    <span class="info"><strong>Notas:</strong>: 🌟🌟🌟🌟</span>
-                    <span class="info"><strong>Data de lançamento:</strong>: 01/11/2022</span>
-                    <span class="info"><strong>Tempo de jogo:</strong>: 9h</span>
-                    <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-                  </div>
-                  </ul>
-                </div>
-              </div>
-
-
-            </div>  
+            <div class="row" id="rwJogos"> </div>  
           </div>
         </div>
 
@@ -347,64 +326,26 @@
           <h1>Plataformas</h1>
         </div>
       </div>
-      <div class="row" id="rwPlataformas">
+      <div class="row" id="rwPlataformas"> </div>
 
-        <div class="col">
-          <div class="conteudo_plat">
-            <h4>Playstation Network</h4>
-            <img src="assets/psn-logo.png" alt="Bootstrap" width="160" height="90">
-            <h5>Principais jogos</h5>
-            <li>The Last of Us</li>
-            <li>Uncharted</li>
-            <li>God of War</li>
-            <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="conteudo_plat">
-            <h4>Epic Games</h4>
-            <img src="assets/epic-logo.png" alt="Bootstrap" width="160" height="90">
-            <h5>Principais jogos</h5>
-            <li>Fortnite</li>
-            <li>World War Z</li>
-            <li>Slime Rancher 2</li>
-            <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="conteudo_plat">
-            <h4>Steam</h4>
-            <img src="assets/steam-logo.jpg" alt="Bootstrap" width="160" height="90">
-            <h5>Principais jogos</h5>
-            <li>Counter-Strike</li>
-            <li>Dota 2</li>
-            <li>Dying Light</li>
-            <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-          </div>
-        </div>
-
-      </div>
       <!-- AQUI FICA O CARREGAMENTO PLATAFORMAS-->
-      <div class="bt">
+      <div class="bt" id="btnPlataformasWide">
         <div class="row">
           <div class="col 6">
           </div>
           <div class="col">
-            <button type="button" class="btn btn-dark"> Carregar mais plataformas</button>
+            <button type="button" class="btn btn-dark" onclick="bttAtualizaPlataformas()"> Carregar mais plataformas</button>
           </div>
         </div>
       </div>
 
 
-      <div class="bt_tf">
+      <div class="bt_tf" id="btnPlataformasSmall">
         <div class="row">
           <div class="col 6">
           </div>
           <div class="col">
-            <button type="button" class="btn btn-dark"> &#9702; &#9702; &#9702; </button>
+            <button type="button" class="btn btn-dark" onclick="bttAtualizaPlataformas()"> &#9702; &#9702; &#9702; </button>
           </div>
         </div>
       </div>
@@ -421,46 +362,9 @@
           <h1>Publishers</h1>
         </div>
       </div>
-      <div class="row" id="rwPublishers">
 
-        <div class="col">
-          <div class="conteudo_publ">
-            <h4>Rockstar</h4>
-            <img src="assets/rockstar-logo.jpg" alt="Bootstrap" width="160" height="90">
-            <h5>Principais jogos</h5>
-            <li>GTA: San Andreas</li>
-            <li>Bully</li>
-            <li>Red Dead Redemption</li>
-            <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-          </div>
-        </div>
+      <div class="row" id="rwPublishers"> </div>
 
-        <div class="col">
-          <div class="conteudo_publ">
-            <h4>Ubisoft</h4>
-            <img src="assets/ubisoft-logo.webp" alt="Bootstrap" width="160" height="90">
-            <h5>Principais jogos</h5>
-            <li>Assassin's Creed Valhalla</li>
-            <li>Far Cry 6</li>
-            <li>Rainbow Six Siege</li>
-            <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="conteudo_publ">
-            <h4>Mojang</h4>
-            <img src="assets/mojang-logo.webp" alt="Bootstrap" width="160" height="90">
-            <h5>Principais jogos</h5>
-            <li>Minecraft</li>
-            <li>Minecraft Dungeons</li>
-            <li>Minecraft: Story Mode</li>
-            <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
-          </div>
-        </div>
-
-
-      </div>
       <!-- AQUI FICA O CARREGAMENTO PUBLISHERS-->
       <div class="bt" id="btnPublishersWide">
         <div class="row">

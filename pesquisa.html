@@ -78,46 +78,46 @@
 <script type="text/javascript" src="/js/script.js"></script>
 
 <script>
-
+    // recebe o valor do input e salva em txtSearch
     var txtSearch = document.getElementById('txtSearch')
     let btnSearch = document.getElementById('btnSearch');        
     let gamesPlace = document.getElementById('resultados')
     let txtPesquisa = txtSearch.value
 
-    if (txtSearch.value === '') {
+    if (txtSearch.value === '') { //se search estiver vazia, pega o nome pelo url parametro
       console.log('txt tava vazio')
       const urlP = window.location.search;
       const urlParams = new URLSearchParams(urlP);
       var txtParams = urlParams.get('name');
     }
 
-    document.body.onload = () => {
+    document.body.onload = () => { //ao carregar a pagina e clicar no botão de pesquisa abre a function
         btnSearch.addEventListener ('click', pesquisaClick )
     }
 
-    function pesquisaClick () {
+    function pesquisaClick () { //função passa o nome para a url da pagina e recarrega
       window.location.href = `/pesquisa.html?name=${txtSearch.value}`
     }
 
 </script>
 
-<script defer>
+<script defer> //depois que a pagina for recarregada
 
-    if (txtSearch.value === '') {
+    if (txtSearch.value === '') { //verifica se estiver vazio e chama a função para mostrar o resultado da pesquisa
         pesquisaParams()
     }
 
       function pesquisaParams () {
-      console.log('entrou na function pesquisa')
         let url =`https://api.rawg.io/api/games?key=4167d5a86b9b47439d0b46aa63a7d97c&search=${txtParams}`
         console.log('url: '+url)
         fetch (url)
             .then(res => res.json())
             .then(data => {
+              
                    let saida = '';
                     for (let i=0; i<6;i++)  {                    
                         let search = data.results[i];
-                        var esrb = search.esrb_rating;
+                        let esrb = search.esrb_rating;
                         if (esrb === undefined ) {
                           esrb = "undefined"
                         }
@@ -137,7 +137,6 @@
                         </div>
                         </div>`
                       }
-                    console.log(saida)
                     gamesPlace.innerHTML = saida;
             })
     }

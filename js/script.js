@@ -1,50 +1,55 @@
 
-      /* depois de passar o id pra pagina detalhes via url -  obg ficar no topo*/
+    //Passa id p/ detalhes.html -  obrigatorio ficar no topo*/
       const myKeyValue = window.location.search;
       const urlParams = new URLSearchParams(myKeyValue);
-      
       const id = urlParams.get('id');
  
-
-
 /* ***************************************************************
-        INVOCANDO FUNÇÕES:
-            - Fetch (games) => lançamentos & destaques.
-            - Fetch (publishers) => publishers
-            - Fetch (plataformas) => publishers
-
-                - Carregamento dos destaques, lançamentos e publishers.
+        FUNÇÕES:
+            apenas na home-pag
+                - Fetch (games) => lançamentos.
+                - Fetch (publishers) => publishers
+                - Fetch (plataformas) => publishers
+                - Carrega mais lançamentos/publishers/plataformas
+            apenas na detalhes-pag
+                - Fetch (game${id}) => detalhes.html
+            apenas na pesquisa-pag
+                - Fetch (game${jogo.name}) => pesquisa.html
+            em qualquer lugar 
+                - Adiciona generos
+                - Traduz classificação indicativa (teen -> adolescentes)
+                - Transforma data (mm/dd/yyyy -> dd/mm/yyyy)
+                - Transforma review (4.1 -> ⭐⭐⭐⭐)
+                - Verifica se tem descrição no jogo e escreve.
         
    *************************************************************** */
     let qntCardJogos = 8;   //tam padrão para a quant de jogos exibidos    
     let qntCardPublishers = 3; //tam padrão para a quant de pb exibidos 
-    let qntCardPlataforma = 3; //tam padrão para a quant de pb exibidos 
+    let qntCardPlataforma = 3; //tam padrão para a quant de pt exibidos 
     
-    //so chama a funcao se rwJogos != de null, ou seja, se está na pagina de destaques, não carrega.
-        const pagJogos = document.getElementById('rwJogos');
-        const pagPublishers = document.getElementById('rwPublishers');
-        const pagPlataformas = document.getElementById('rwPlataformas');
-        const pagDetalhes = document.getElementById('mainDetalhes');
+    // So chama a funcões se a div estiver na pagina, ou seja != de null. - evita erros de carregamento
+            const pagJogos = document.getElementById('rwJogos');
+            const pagPublishers = document.getElementById('rwPublishers');
+            const pagPlataformas = document.getElementById('rwPlataformas');
+            const pagDetalhes = document.getElementById('mainDetalhes');
 
+            if (pagJogos !== null) {
+                console.log("Apis serão carregadas - lançamentos");
+                jogosApi (qntCardJogos);
+            }
+            if (pagPublishers !== null) {
+                console.log("Apis serão carregadas - publishers");
+                publishersApi (qntCardPublishers);
+            }
+            if (pagPlataformas !== null) {
+                console.log("Apis serão carregadas - plataformas");
+                plataformasApi (qntCardPlataforma);
+            }
 
-        if (pagJogos !== null) {
-            console.log("Apis serão carregadas - lançamentos");
-            jogosApi (qntCardJogos);
-        }
-        if (pagPublishers !== null) {
-            console.log("Apis serão carregadas - publishers");
-            publishersApi (qntCardPublishers);
-        }
-        if (pagPlataformas !== null) {
-            console.log("Apis serão carregadas - plataformas");
-            plataformasApi (qntCardPlataforma);
-        }
-
-        if (pagDetalhes !== null) {
-            console.log("A api será carregada - Detalhes de id");
-            JogoDetalhes ();
-        }
-
+            if (pagDetalhes !== null) {
+                console.log("A api será carregada - Detalhes de id");
+                JogoDetalhes ();
+            }
 
 
     function jogosApi () {
@@ -121,10 +126,10 @@
                                             <ul class="icones">
                                                 <a href="https://www.youtube.com/results?search_query=${dt.slug}"> <li><i class="fa-brands fa-youtube icon"></i></li> </a>
                                                 <a href="${dt.reddit_url}"> <li><i class="fa-brands fa-reddit icon"></i></li> </a>
-                                                <a href> <li><i  class="fa-brands fa-steam icon"></i></li> </a>
-                                                <a href> <li><i href="https://store.playstation.com/pt-br/search/${dt.slug}" class="fa-brands fa-playstation icon"></i></li> </a>
-                                                <a href> <li><iconify-icon href="https://store.epicgames.com/pt-BR/browse?q=${dt.slug}&sortBy=relevancy&sortDir=DESC&count=40" icon="cib:epic-games" class="icon"></iconify-icon></li> </a>
-                                                <a href> <li><i href="https://www.microsoft.com/pt-br/search/explore?q=${dt.slug}" class="fa-brands fa-microsoft icon"></i></li> </a>
+                                                <a href="https://www.youtube.com/results?search_query=${dt.slug}"> <li><i  class="fa-brands fa-steam icon"></i></li> </a>
+                                                <a href="https://store.playstation.com/pt-br/search/${dt.slug}"> <li><i class="fa-brands fa-playstation icon"></i></li> </a>
+                                                <a href="https://store.epicgames.com/pt-BR/browse?q=${dt.slug}"> <li><iconify-icon  icon="cib:epic-games" class="icon"></iconify-icon></li> </a>
+                                                <a href="https://www.microsoft.com/pt-br/search/explore?q=${dt.slug}"> <li><i class="fa-brands fa-microsoft icon"></i></li> </a>
                                             </ul>
                                         </div>
                                     </div>
@@ -150,7 +155,7 @@
                         <li>${pb.games[0].name}</li>
                         <li>${pb.games[1].name}</li>
                         <li>${pb.games[2].name}</li>
-                        <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
+                        <p> <a class="moreInfo" href="https://www.google.com/search?q=${pb.slug}">Mais detalhes</a></p>
                     </div>
                     </div>`
                 }
@@ -173,7 +178,7 @@
                       <li>${pf.games[0].name}</li>
                       <li>${pf.games[1].name}</li>
                       <li>${pf.games[2].name}</li>
-                      <p> <a class="moreInfo" href="#">Mais detalhes</a></p>
+                      <p> <a class="moreInfo" href="https://www.google.com/search?q=${pf.slug}">Mais detalhes</a></p>
                     </div>
                   </div>`
                 }
@@ -248,6 +253,22 @@
         }
         else {
             console.log("document not accessible - bttAtualizaPublishers()")
+        }
+    }
+
+    function bttAtualizaPlataformas () { 
+        if(typeof window !== 'undefined')   {
+            if (qntCardPlataforma<9)    {
+                qntCardPlataforma +=3;
+                plataformasApi(qntCardPlataforma);
+                } else {
+                console.log("Btn parou de funcionar, publishers chegou ao limite")
+                document.getElementById('btnPlataformasWide').style.display="none";
+                document.getElementById('btnPlataformasSmall').style.display="none";
+            }
+        }
+        else {
+            console.log("document not accessible - bttAtualizaPlataformas()")
         }
     }
     
