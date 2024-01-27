@@ -1,0 +1,116 @@
+@import url(./responsive.css);
+/*importa o arquivo de responsividade*/
+
+/* PARA TODO O SITE*/
+
+body {
+    color: white;
+    background: #0a2e36;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif !important;
+    color: whitesmoke !important;
+}
+
+h3 {
+    font-family: 'Libre Baskerville', serif !important;
+}
+
+h4 {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+h5 {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.moreInfo {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    z-index: 999;
+}
+
+/* HEADER ----------------------------------*/
+
+.navbar-toggler {
+    border-color: #222222;
+}
+
+.toggler-icon {
+    color: white;
+}
+
+.logo {
+    padding-left: 20%;
+}
+
+#header {
+    width: 100%;
+    background-color: #3a3d50;
+}
+
+#header.active {
+    position: fixed;
+    z-index: 9999;
+    box-shadow: 5px 4px 10px black;
+    
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(66, 115, 184);
+    text-shadow: 2px 2px 3px rgb(10, 36, 73);
+}
+
+.navbar ul li {
+    text-shadow: 2px 1px 3px rgb(10, 36, 73);
+}
+#hidden {
+    padding-top: 100px;
+}
+.jogosPesquisados {
+    border: 3px solid rgb(211, 65, 65);
+    border-radius: 10px;
+    margin: 50px;
+    height: 30%;
+}
+.jogosPesquisados:hover {
+    font-weight: 500;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+}
+
+.jogosPesquisados h5{
+    color:rgb(161, 46, 46);
+    font-size: larger;
+    font-weight: bolder !important;
+}
+
+
+.imgdiv {
+    position: relative;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.divPesq    {
+    color: none;
+    text-decoration: none;
+    color: white;
+}

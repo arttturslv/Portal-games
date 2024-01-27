@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+  
+  <link rel="stylesheet" href="css/main.css" />  <!--chama o css main-->
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+ 
+  <script src="https://kit.fontawesome.com/354216b200.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="imagem/png" href="assets/logo.png" />   <!--icone cima site aba-->
+
+  <!--fontes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Libre+Baskerville:wght@700&family=Open+Sans&family=Playfair+Display:wght@800&display=swap"
+    rel="stylesheet">
+
+  <title>Laporte</title>
+</head>
+
+<body>
+
+  <div id="header" class="active">
+    <nav class="navbar navbar-expand-lg bg- justify-content-between">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="/index.html">
+          <img src="assets/logo-nome.svg" class="logo" alt="Bootstrap" width="160" height="50">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="baixo">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#destaquesId">Destaques</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#lançamentosId">Lançamentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#plataformasId">Plataformas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#publishersId">Publishers</a>
+              </li>
+
+            </ul>
+            <input class="form-control me-2" type="text" id="txtSearch" placeholder="Search" >
+             <button class="btn btn-outline-success" id="btnSearch" onclick="redireciona()">Search</button>
+            </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <script>
+      let indexSearch = document.getElementById('txtSearch');
+      function redireciona () { //redireciona passando o valor pra url.
+        console.log('Pagina de pesquisa será carregada.')
+        window.location.href = `/pesquisa.html?name=${indexSearch.value}`
+      }
+  </script>
+
+  <!-- AQUI FICA TODA PARTE DE DESTAQUES-->
+  <div class="destaques" id="destaquesId">
+    <div>
+      <p class="creator">Artur Marcos da Silva - ADS - 00796214 </p>
+       <h1>DESTAQUES</h1>
+    </div>
+    <!-- CAROUSEL-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+
+
+      <div class="carousel-inner">
+
+        <!-- CAROUSEL1-->
+        <div class="carousel-item active">
+
+          <div class="container text-center">
+
+            <div class="row">
+              <div class="col">
+                <div class="container">
+                  <div class="div-video">
+                    <iframe width="560" height="315"
+                      src="https://www.youtube.com/embed/nOMIwsupy9k?controls=0&autoplay=1&mute=1"></iframe>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col black">
+                <h3>Black Myth: Wukong</h3>
+                <p class="text">
+                  Black Mith: Wukong é inspirado em uma história chinesa sobre o “Rei Macaco”, dessa forma, Wukong já
+                  foi citado em muitas narrativas. Como, por exemplo, inspirando até mesmo Akira Toriyama em toda a
+                  primeira fase de Dragon Ball, com Son Goku.
+                </p>
+                <p class="text3"> O jogo entrou em grande destaque devido o uso do Unreal Engine 5, sendo assim, a
+                  desenvolvedora descreveu seu jogo como um RPG de ação e aventura com inspiração em nomes como Sekiro e
+                  God of War.
+                </p>
+                <ul>
+                  <div class="informações">
+                    <span class="info"><strong>Developer</strong>: Game Science</span>
+                    <span class="info"><strong>Lançamento</strong>: Sem data</span>
+                    <span class="info"><strong>Plataformas</strong>: PC, Playstation, Xbox</span>
+                    <span class="info"><strong>Gênero</strong>: RPG, Ação e Aventura</span>
+                    <span class="info"><strong>Avaliação</strong>: Indisponível</span>
+                  </div>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CAROUSEL2-->
+
+        <div class="carousel-item">
+
+          <div class="container text-center">
+
+            <div class="row">
+              <div class="col">
+                <div class="container">
+                  <div class="div-video">
+                    <iframe width="560" height="315"
+                      src="https://www.youtube.com/embed/JSRtYpNRoN0?controls=0&autoplay=1&mute=1"></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <h3>The Elder Scrolls V: Skyrim</h3>
+                <p class="text">
+                  Vencedor de mais de 200 prêmios incluindo Game of The Year, Skyrim Anniversary Edition junta o Skyrim
+                  Special Edition e todas as criações do Creation Club lançadas até a data do lançamento da Anniversary
+                  Edition, incluindo missões, armaduras e modos de jogo extras!
+                </p>
+                <p class="text3">O jogo também conta com uma novidade feita por fãs, o "Skyrim Together Reborn", uma
+                  modificação que pode ser instalada utilizando o site "<a
+                    href="https://www.nexusmods.com/skyrimspecialedition/mods/69993"><strong>NexusMods</strong></a>" que
+                  permite jogar Skyrim com seus amigos.
+                </p>
+                <ul>
+                  <div class="informações">
+                    <span class="info"><strong>Developer</strong>: Bethesda Game Studios</span>
+                    <span class="info"><strong>Lançamento</strong>: 11 de novembro de 2011</span>
+                    <span class="info"><strong>Plataformas</strong>: PC, Playstation, Xbox, Nintendo Switch</span>
+                    <span class="info"><strong>Gênero</strong>: RPG, Ação e Aventura, Fantasia</span>
+                    <span class="info"><strong>Avaliação</strong>: 9,6/10</span>
+                  </div>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- CAROUSEL3-->
+        <div class="carousel-item">
+
+          <div class="container text-center">
+
+            <div class="row">
+              <div class="col">
+                <div class="container">
+                  <div class="div-video">
+                    <iframe width="560" height="315"
+                      src="https://www.youtube.com/embed/QVUD5me50Xg?controls=0&autoplay=1&mute=1"></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <h3>JoJo´s Bizarre Adventure: All Star Battle R </h3>
+                <p class="text">
+                  Conhecido por seus heróis carismáticos, estilo de arte característico e bordões inesquecíveis ("Yare
+                  yare daze..."), vem aí mais um episódio de JoJo's Bizarre Adventure! JoJo's Bizarre Adventure:
+                  All-Star Battle R!
+                </p>
+                <p class="text3">Com visuais autênticos ao estilo de Hirohiko Araki, JoJo's Bizarre Adventure: All-Star
+                  Battle R captura o estilo artístico exagerado que é clássico de JoJo e com 50 personagens jogáveis de
+                  todos os arcos e uma variedade de modos de jogo.
+                </p>
+                <ul>
+                  <div class="informações">
+                    <span class="info"><strong>Developer</strong>: BCyberConnect2 Co. Ltd.</span>
+                    <span class="info"><strong>Lançamento</strong>: 01 de setembro de 2022</span>
+                    <span class="info"><strong>Plataformas</strong>: PC, Playstation, Xbox, Nintendo Switch</span>
+                    <span class="info"><strong>Gênero</strong>: Luta, Ação, Fantasia</span>
+                    <span class="info"><strong>Avaliação</strong>: 8,4/10</span>
+                  </div>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- CAROUSEL3 FIM -->
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- CAROUSEL FIM-->
+
+  </div>
+  <!-- FIM DA PARTE DE DESTAQUES-->
+
+  <!-- AQUI FICA TODA PARTE DE LANÇAMENTOS-->
+  <div class="lançamentos" id="lançamentosId">
+    <div class="container text-center">
+
+      <div class="row">
+        <div class="col-md-6 col-sm-12 lancol">
+          <h1>Lançamentos</h1>
+        </div>
+
+        <!-- AQUI FICA AS ORDENAÇOES-->
+        <div class="col-md-3 col-sm-12 d-flex justify-content-between">
+          <div class="col-md-3 col-sm-6">
+            <li class="nav-item dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Ordem
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Popularidade</a></li>
+                <li><hr class="dropdown-divider"></li>
+                  <li><button class="dropdown-item" type="button">Mais estrelas</button></li>
+                <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Menos estrelas</a></li>
+              </ul>
+            </li>
+          </div>
+          <!-- GENEROS -->
+          <div class="col-md-2 col-sm-6 ">
+            <li class="nav-item dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Genêro
+              </a>
+              <ul class="dropdown-menu" >
+                <li><a class="dropdown-item" href="#">Todos</a></li>
+                <li><a class="dropdown-item" href="#">Aventura</a></li>
+                <li><a class="dropdown-item" href="#">Estratégia</a></li>
+                <li><a class="dropdown-item" href="#">Luta</a></li>
+                <li><a class="dropdown-item" href="#">Esportes</a></li>
+                <li><a class="dropdown-item" href="#">RPG</a></li>
+                <li><a class="dropdown-item" href="#">Simulação</a></li>
+                <li><a class="dropdown-item" href="#">FPS</a></li>
+              </ul>
+            </li>
+          </div>
+        </div>
+
+
+        <!-- FIM DAS ORDENAÇÕES-->
+
+        <!-- AQUI FICA A PRIMEIRA LINHA DE JOGOS (LANÇAMENTOS)-->
+        <div class="lanc_jogos">
+          <div class="container text-center">
+
+            <div class="row" id="rwJogos"> </div>  
+          </div>
+        </div>
+
+        <!-- AQUI FICA O CARREGAMENTO LANÇAMENTOS-->
+        <div class="bt" id="btnLancamentosWide">
+          <div class="row">
+            <div class="col 6">
+            </div>
+            <div class="col" >
+              <button type="button" class="btn btn-dark"  onclick="bttAtualizaJogos()"> Carregar mais lançamentos</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bt_tf" id="btnLancamentosSmall">
+          <div class="row">
+            <div class="col 6">
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-dark xmt"  onclick="bttAtualizaJogos()"> &#9702; &#9702; &#9702; </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- FIM DA PARTE DE LANÇAMENTOS-->
+
+  <!-- AQUI FICA TODA PARTE DE PLATAFORMAS-->
+  <div class="plataformas" id="plataformasId">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <h1>Plataformas</h1>
+        </div>
+      </div>
+      <div class="row" id="rwPlataformas"> </div>
+
+      <!-- AQUI FICA O CARREGAMENTO PLATAFORMAS-->
+      <div class="bt" id="btnPlataformasWide">
+        <div class="row">
+          <div class="col 6">
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-dark" onclick="bttAtualizaPlataformas()"> Carregar mais plataformas</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bt_tf" id="btnPlataformasSmall">
+        <div class="row">
+          <div class="col 6">
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-dark" onclick="bttAtualizaPlataformas()"> &#9702; &#9702; &#9702; </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- FIM DA PARTE DE PLATAFORMAS-->
+
+  <!-- AQUI FICA TODA PARTE DE PUBLISHERS-->
+  <div class="publishers" id="publishersId">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <h1>Publishers</h1>
+        </div>
+      </div>
+
+      <div class="row" id="rwPublishers"> </div>
+
+      <!-- AQUI FICA O CARREGAMENTO PUBLISHERS-->
+      <div class="bt" id="btnPublishersWide">
+        <div class="row">
+          <div class="col 6">
+          </div>
+          <div class="col">
+            <div class="col">
+              <button type="button" class="btn btn-dark" onclick="bttAtualizaPublishers()"> Carregar mais publishers</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bt_tf" id="btnPublishersSmall">
+        <div class="row">
+          <div class="col 6">
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-dark" onclick="bttAtualizaPublishers()"> &#9702; &#9702; &#9702;</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- FIM DA PARTE DE PUBLISHERS-->
+
+  <!-- SOBRE E EDITORIAL-->
+  <div class="sobre">
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <h1>Sobre</h1>
+          <p class="text">Nossa plataforma nos permite obter uma vantagem sobre os concorrentes no mercado digital,
+            fornecendo aos leitores um conteudo fácil de ler.</p>
+          <p class="text2"> Nosso principal mercado é a indústria de entretenimento, não possuímos propagandas no site
+            porque acreditamos numa proposta sustentavel com o Patreon. Se possivel, nos apoie!</p>
+        </div>
+
+        <div class="col">
+          <div class="edit">
+
+            <h1>Editorial</h1>
+            <ul>
+              <li><strong><i class="fa-solid fa-user"></i> Redação:</strong> Artur Marcos</li>
+              <li><strong><i class="fa-solid fa-user"></i> Pesquisa:</strong> Artur Marcos</li>
+              <li><strong><i class="fa-solid fa-user"></i> Gerente Geral:</strong> Artur Marcos</li>
+              <!--</ul>-->
+              <li><strong><br>Redes Sociais</strong>
+              <li>
+                <a href="//www.facebook.com"><img src="assets/facebook-logo.png" width="36"
+                    height="30"></a>
+                <a href="//www.twitter.com"><img src="assets/twitter-logo.png" width="40" height="40"></a>
+                <a href="//www.instagram.com"><img src="assets/instagram-logo.png" width="30"
+                    height="30"></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="rd_telefone">
+        <li><strong>Redes Sociais</strong>
+        <li>
+          <a href="//www.facebook.com"><img src="assets/facebook-logo.png" width="36" height="30"></a>
+          <a href="//www.twitter.com"><img src="assets/twitter-logo.png" width="40" height="40"></a>
+          <a href="//www.instagram.com"><img src="assets/instagram-logo.png" width="30" height="30"></a>
+      </div>
+
+    </div>
+  </div>
+  <!-- FIM SOBRE E EDITORIAL-->
+
+  <!-- INICIO FOOTER-->
+  <footer id="wrapper">
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <p>Copyright 2020 &#169; Disciplina de desenvolvimento de Interfaces Web <strong> - ICEI PUC Minas</strong>
+          </p>
+        </div>
+        <div class="col">
+          <a class="navbar-brand" href="#">
+            <img class="footer_img" src="assets/logo-nome.svg" alt="Bootstrap" width="130" height="40">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- FIM FOOTER-->
+</body>
+
+<script type="text/javascript" src="/js/script.js"></script>
+
+</html>

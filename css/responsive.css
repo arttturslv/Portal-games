@@ -1,0 +1,162 @@
+/*RESPONSIVIDADE PESQUISA*/
+
+
+
+
+
+
+
+
+
+
+
+/* FIM   RESPONSIVIDADE PESQUISA*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*sobre e editorial vira block, texto editorial some e fica só imagens*/
+@media (max-width: 577px) {
+    .sobre .col:nth-child(1) {
+        display: inline-block;
+    }
+
+    .sobre .col:nth-child(2) {
+        display: none;
+    }
+
+    .text3 {
+        /*some alguns paragrafos*/
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #cf {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lançamentos h1 {
+        /*titulo alinha no mobile*/
+        text-align: center;
+    }
+
+    .publishers .col h1 {
+        /*titulo alinha no mobile*/
+        display: block;
+        text-align: center;
+    }
+
+    .plataformas .col h1 {
+        /*titulo alinha no mobile*/
+        display: block;
+        text-align: center;
+    }
+
+    .bt {
+        /*botão completo "carregar..." some*/
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .lançamentos h1 {
+        /*alinha titulo na mobile quando ele quebra com os organizadores*/
+        text-align: start;
+    }
+
+    .bt_tf {
+        /*botão reduzido some a partir de 768*/
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .rd_telefone {
+        /*some com as redes sociais tam > que telefone*/
+        display: none;
+    }
+}
+
+@media (max-width:991.98px) {
+
+    /*controla o icon do header (a partir de 900)*/
+    #header .baixo {
+        width: 100%;
+    }
+
+    .destaques .container .white {
+        columns: 12;
+    }
+
+    .destaques .container .col {
+        display: block;
+        flex: 1 1 90%;
+    }
+
+    .destaques h3 {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    /*controla o 2º paragrafo do sobre e texto destaques*/
+    .text2 {
+        display: none;
+    }
+
+    /*para centralizar*/
+    .card_jogo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .conteudo_plat {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .conteudo_publ {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*centralizar fim*/
+
+    /*aumentar tam img*/
+    .plataformas img {
+        width: 120%;
+        height: 120%;
+    }
+
+    .publishers img {
+        width: 120%;
+        height: 120%;
+    }
+
+    /*aumentar tam fim*/
+}
